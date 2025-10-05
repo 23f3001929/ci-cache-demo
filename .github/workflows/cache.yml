@@ -15,11 +15,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Cache dependencies
-        id: cache-step
+        id: cache
         uses: actions/cache@v4
         with:
           path: ~/.cache/myapp
           key: cache-11bec75
 
       - name: prime-cache-11bec75
-        run: echo "Cache result: ${{ steps.cache-step.outputs.cache-hit }}"
+        run: echo "Cache result: ${{ steps.cache.outputs.cache-hit }}"
