@@ -22,4 +22,5 @@ jobs:
           key: cache-11bec75
 
       - name: prime-cache-11bec75
-        run: echo "Cache result: ${{ steps.cache.outputs.cache-hit }}"
+        run: |
+          echo "Cache result: ${{ steps.cache.outputs.cache-hit }}"
